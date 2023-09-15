@@ -9,19 +9,16 @@
 /* Header styling*/
 
 header{
-  color: white;
-  background-color:#5f0f4e;
+  color: #0b132b;
+  background-color:#3aafa9;
   padding: 20px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-header h1 {
-  display: inline;
+  display: flex;
+  justify-content: space-between; /* Gives space between header buttons*/
 }
 
 header ul {
   list-style-type: none;
-  float: right;
   margin-top: 10px;
   margin-right: 40px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -31,7 +28,7 @@ header ul {
 header ul li {
   display: inline-block;
   margin-left: 30px;
-  background:#e52a6f;
+  background:#3a506b;
   padding: 10px;
 }
 
@@ -43,176 +40,128 @@ a:link, a:visited, a:active { /* Removes hyperlink style*/
 /*Main styling*/
 
 main {
-  display: inline-block;
-  width: 80%;
-  background:#67aeca;
-}
-
-/*Indice styling*/
-
-.indice {
-  float: left;
-  width: 20%;
-  height: 943px;  
-  background:#e52a6f;
-}
-
-.indice h1 {
-  float: right;
-  margin-right:10px;
-  color: white;
-  font-size: 40px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-#about-me {
-  margin-top: 35px;
-}
-
-#work {
-  margin-top: 350px;
-}
-
-#contact-me {
-  margin-top: 380px;
-}
-
-/*Work section styling*/
-
-.contenedor{
-  position: relative;
-  width: 350px;
-  height: 350px; 
-  margin: 0 auto;
-  margin-left: 2%;
-  display: inline-block;
-  text-align: center;
-}
-
-.img-texto{
-  position: absolute;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  top: 90%;
-  left: 38%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  background:#5f0f4e;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  width: 250px;
-  height: 50px;
+  flex-wrap:wrap;
 }
-
-.img{ 
-  width: 345px;
-  height: 345px;
-  text-align: center;
-  border: 2px solid white;
-  background-size: cover;
-}
-
-.mini-project-01{
-  position: relative;
-  width: 1100px;
-  height: 350px;
-  margin: 0 auto;
-  margin-left: 2%;
-  display: inline-block;
-  text-align: center;
-}
-
-.mini-img-texto{
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  top: 90%;
-  left: 12%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  background:#5f0f4e;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.mini-img{
-  width: 1103px;
-  height: 345px;
-  text-align: center;
-  border: 2px solid white;
-}
-
-/*Pseudo classes and elements*/
-.contenedor:hover {
-  font-size: 120%;
-}
-
-.img-texto:hover {
-  border: 2px solid white;
-}
-
-.mini-project-01:hover {
-  font-size: 120%;
-}
-
-.mini-img-texto:hover {
-  border: 2px solid white;
-}
-
-.contact:hover {
-  font-size: 120%;
-}
-
-.contact ul li:hover {
-  border: 2px solid white;
-}
-
-/*Other sections styling*/
 
 section {
-  padding: 10px;
-  margin: 10px;
+  margin: 5px;
+  padding: 5px;
   color: white;
-  border-left: 6px solid #5f0f4e;
+  border-top: 2px solid #0b132b;
+  width: 100%;
 }
 
-p{
+/*Boxes on the left*/
+
+.title-box{
+  width: 20%;
+  height: 100%;
+  float:left;
+  border-right: 2px solid #0b132b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-box h1{
+  color: #0b132b;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*My photo*/
+
+#foto-titulo{
+  height: 100%;
+  padding: 10px;
+  border: 3px solid white hidden;
+  margin: 20px;
+}
+
+/*About me section*/
+
+.box-about-me{
+  width: 80%;
+  display: flex;
+  flex-wrap:wrap;
+  border: 1px solid black hidden;
+}
+
+#p-about-me{
+  color: white;
+  background: #3a506b ;
   padding: 10px;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-left: 2%;
 }
 
-#p-about-me{
-  background: #5f0f4e;
-  width: 1103px;
+/*Work section*/
+
+.box-work{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  border: 1px solid black hidden;
 }
 
+img {
+  width: 345px;
+  height: 345px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.big-img{
+  width: 1000px;
+  height: 345px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.text-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 50px;
+  width: 200px;
+  color: white;
+  background: #3a506b;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 /* Contact me section styling*/
 
-.contact {
+.box-contact{
+  display: flex;
+  justify-content: center;
+  border: 1px solid black hidden;
   text-decoration: none;
   list-style-type: none;
   padding: 15px;
-  margin-left: 7%;
-  float: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 30px;
 }
 
-.contact ul li {
+.box-contact ul li {
   display: inline-block;
   margin-left: 45px;
-  background: #5f0f4e;
+  color: #0b132b;
   padding: 10px;
-  width: 250px;
+  width: 200px;
   height: 50px;
   text-align: center;
-  font-size: 20px;
+  text-decoration: underline;
+}
+
+.box-contact ul li a {
+  display: inline-block;
+  margin-left: 45px;
+  color: #0b132b;
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  text-decoration: underline;
 }
 
 /* Footer styling*/
@@ -221,10 +170,53 @@ footer {
   clear:both;
   position: relative;
   text-align: center;
-  background: #5f0f4e;
-  color: white;
+  color: #0b132b;
+  background: #3aafa9;
   font-family: 'Courier New', Courier, monospace;  
 }
 
+/*Pseudo classes and elements*/
+.text-box:hover {
+  font-size: 120%;
+}
+
+header ul li:hover {
+  border: 2px solid white;
+}
+
+.text-box:active {
+  border: 2px solid #0b132b ;
+}
+
+.big-img:hover {
+  border: 3px solid #0b132b ;
+}
+
+img:hover {
+  border: 3px solid #0b132b ;
+}
+
+.box-contact ul li:hover {
+  font-size: 120%;
+}
+
+/*Media queries*/
+
+@media screen and (max-width: 576px) {
+  main {
+    background-color: #3aafa9;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  }
+  header ul li{
+  margin: 5px;
+  }
+}
 
 
